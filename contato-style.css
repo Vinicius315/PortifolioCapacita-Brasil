@@ -1,0 +1,127 @@
+:root {
+  --branco: #ffffff;
+  --cinzaclaro: #ebebeb;
+  --azulclaro: #00accc;
+  --azulescuro: #002b33;
+  --cinzagrafite: #151515;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--cinzaclaro);
+}
+
+/* Seção de Contato */
+#contato {
+  background-color: var(--azulescuro);
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: var(--branco);
+}
+
+#contato h1 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+#contato p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #005577;
+  border-radius: 4px;
+  background-color: #003945;
+  color: var(--branco);
+  margin-bottom: 15px;
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #005577;
+  color: var(--branco);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #007799;
+}
+
+/* Placeholder */
+input::placeholder,
+textarea::placeholder {
+  color: #b0b0b0;
+}
+
+/* Botões de navegação */
+.carousel-buttons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.carousel-btn {
+  background-color: var(--azulescuro);
+  color: var(--branco);
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover,
+.carousel-btn.active {
+  background-color: var(--azulclaro);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #contato {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  #contato {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .carousel-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}

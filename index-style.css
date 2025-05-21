@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  
+}
+
+:root {
+  --branco: #ffffff;
+  --cinzaclaro: #ebebeb;
+  --azulclaro: #00accc;
+  --azulescuro: #002b33;
+  --cinzagrafite: #151515;
+} 
+
+html, body {
+  background-color: var(--cinzaclaro);/* background da pagina*/
+  overflow-x: hidden;
+}
+
+.intro {
+  width: 100vw;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--azulescuro);
+}
+
+.background {
+  width: 90rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#header {
+  background-color: var(--azulescuro);
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav a {
+  color: var(--branco);
+  font-size: 18px;
+  padding: 8px 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: #005577;
+  border-radius: 5px;
+}
+
+#corpo-texto {
+  display: grid;
+  align-items: center;
+  padding: 4rem;
+  gap: 50px;
+  margin: 5px 10px 15px 20px;
+  margin-bottom: 20px;
+  padding-bottom: 6px;
+  max-width: fit-content;
+}
+
+span {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+#footer-redes_sociais {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  gap: 20px;
+  list-style: none;
+} /* <- chave estava faltando aqui */
+
+.text-portfolio {
+  color: var(--azulclaro);
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-top: 200px;
+}
+
+.text-autor {
+  color: var(--branco);
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.text-job {
+  font-weight: 200;
+  color: var(--branco);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 1rem;
+}
+
+.testemunhos {/*tag pai de testemunhos */
+  width: 100%;
+  border-color: red;
+  border-style: solid;
+  
+ 
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--branco);/*Cor dos itens*/
+  padding: 30px 30px 30px 30px;
+  border-radius: 20px 20px 20px 20px; /*Bordas arredondads*/
+margin-right: 30px;
+}
+
+
+.testemunhos-headline {
+  font-weight: bolder;
+  font-size: 2rem;
+  color: var(--azulescuro);
+  margin-bottom: 45px;
+}
+
+.carousel-container {
+  max-width: 70rem;
+  overflow: hidden;
+  position: relative;
+  
+}
+
+.cards-flex {
+  display: flex;
+  transition: transform .5s ease-in-out;
+  gap: 20px;
+  flex-wrap: wrap;
+  
+  
+}
+
+.card-item {
+  flex: 0 0 30%;
+  width: 20rem;
+  height: 20rem;
+  border: solid var(--azulescuro) 2px;/* quadrado dos clientes*/
+  box-shadow: 0 0 3px var(--cinzagrafite);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  
+  border-radius: 10px 10px 10px 10px;/*bordas dos clientes*/
+}
+
+.carousel-buttons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.carousel-btn {
+  background-color: var(--azulescuro);
+  color: var(--branco);
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  transition: background-color .3s ease;
+}
+
+.carousel-btn:hover,
+.carousel-btn.active {
+  background-color: var(--azulclaro);
+}
+
+.card-item-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.card-item-paragraph {
+  color: var(--cinzagrafite);
+  text-align: center;
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.card-item-name {
+  font-weight: bold;
+  color: var(--azulescuro);
+}
+
+.card-item-job {
+  font-size: .9rem;
+  opacity: .8;
+}
+
+.card-item-aspas {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 40px;
+  height: 40px;
+  top: 0px;
+  left: 30px;
+}
+
+.card-item-aspas-texto {
+  color: var(--branco);
+  font-size: 4rem;
+  font-weight: bold;
+  transform: translateY(10px);
+}
+
+@media (max-width: 1200px) {
+  .card-item {
+    flex: 0 0 45%;
+  }
+}
+
+@media (max-width: 780px) {
+  .card-item {
+    flex: 0 0 100%;
+  }
+}

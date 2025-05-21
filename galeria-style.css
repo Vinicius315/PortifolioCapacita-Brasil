@@ -1,0 +1,114 @@
+:root {
+  --branco: #ffffff;
+  --cinzaclaro: #ebebeb;
+  --azulclaro: #00accc;
+  --azulescuro: #002b33;
+  --cinzagrafite: #151515;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--cinzaclaro);
+}
+
+/* Seção Galeria */
+#galeria {
+  background-color: var(--branco);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.titulo-portifolio {
+  color: var(--azulescuro);
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Grade de imagens */
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Imagens individuais */
+figure {
+  background-color: var(--azulescuro);
+  padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 300px;
+}
+
+figure:hover {
+  transform: scale(1.05);
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+figcaption {
+  color: var(--branco);
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+/* Botões de navegação */
+.carousel-buttons {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.carousel-btn {
+  background-color: var(--azulescuro);
+  color: var(--branco);
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover,
+.carousel-btn.active {
+  background-color: var(--azulclaro);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #galeria {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  figure {
+    max-width: 100%;
+  }
+
+  .carousel-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
